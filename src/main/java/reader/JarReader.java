@@ -20,10 +20,10 @@ public class JarReader {
 
         List<String> dependencies = new ArrayList<>();
         String path = "/home/atig/Data/github/jar-reader/target/jar-reader-1.0-SNAPSHOT.jar";
-        findPomDependecies(dependencies, path);
+        findProperties(dependencies, path);
     }
 
-    private static void findPomDependecies(List<String> dependecies, String jarPath) throws IOException {
+    private static void findProperties(List<String> dependecies, String jarPath) throws IOException {
         JarFile jarFile = new JarFile(jarPath);
         final Enumeration<JarEntry> entries = jarFile.entries();
         while (entries.hasMoreElements()) {
