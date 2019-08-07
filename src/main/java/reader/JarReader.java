@@ -30,8 +30,8 @@ public class JarReader {
             final JarEntry entry = entries.nextElement();
             final String entryName = entry.getName();
             System.out.println("File name: " + entryName);
-            if (entryName.contains("test.properties")) {
-                System.out.println("===========>> test.properties found");
+            if (entryName.contains(".properties")) {
+                System.out.println("===========>> .properties found");
                 InputStream input = jarFile.getInputStream(entry);
                 String data = readFile(input);
                 processConfigFile(data);
